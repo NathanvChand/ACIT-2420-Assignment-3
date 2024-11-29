@@ -9,6 +9,16 @@ ACIT 2420 Assignment 3 part 1
 ```
 sudo useradd -r -m -d /var/lib/webgen -s /usr/bin/nologin webge 
 ```
+Move the cloned repo files to the webgen users directory.
+
+this is how I did it:
+
+```
+ sudo mv /home/arch/2420-as3-p2-start/generate_index /var/lib/webgen/bin
+ ```
+
+ 
+
 
 ## Task 2
 
