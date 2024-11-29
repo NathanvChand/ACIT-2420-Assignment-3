@@ -1,6 +1,17 @@
 # ACIT-2420-Assignment-3
 ACIT 2420 Assignment 3 part 1
 
+## Note:
+
+make sure nginx and ufw is installed first.
+
+use this: 
+
+```
+sudo pacman -S nginx ufw
+```
+
+
 
 ## Task 1
 
@@ -59,4 +70,14 @@ Persistent=true
 [Install]
 WantedBy=timers.target
 ```
+## Task 3
+
+make a new file for your nginx config.
+
+Do this: 
+
+```
+sudo nvim /etc/nginx/websites/web-config
+````
+
 
