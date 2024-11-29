@@ -34,18 +34,29 @@ Here is my generate-index.service script:
 
 ```
 [Unit]
+Description=Run the damn script
 After=network-online.target
-
-[Timer]
-OnCalendar=*_*_* 5:00:00
-Persistent=true
 
 [Service]
 Type=simple
 ExecStart=/var/lib/webgen/bin/generate_index
 User=webgen
 WorkingDirectory=/var/lib/webgen
+```
+
+Then create your .timer file
+
+Here is my timer: 
+
+```
+[Unit]
+Description=Run the damn script at 5:00 every day
+
+[Timer]
+OnCalendar=*-*-* 5:00:00
+Persistent=true
 
 [Install]
 WantedBy=timers.target
 ```
+
