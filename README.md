@@ -80,4 +80,12 @@ Do this:
 sudo nvim /etc/nginx/websites/web-config
 ````
 
+Open nigix config:
+
+```
+sudo nvim /etc/nginx/nginx.conf
+```
+
+then change the user to webgen and specify its home dir.
+
 
