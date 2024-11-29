@@ -88,4 +88,31 @@ sudo nvim /etc/nginx/nginx.conf
 
 then change the user to webgen and specify its home dir.
 
+Next make the server setup file:
+```
+sudo nvim /etc/nginx/websites/web-configs
+```
+
+set up the index.html to port 80
+
+```
+ server {
+        listen 80;
+        server_name "localhost"
+
+        root /var/lib/webgen/HTML
+        index index.html
+
+        location /static/ {
+                root /var/www/HTML;
+        }
+  }
+```
+
+## Then add permissions:
+
+```
+perms sudo chown -R webgen:webgen /var/www/HTML 
+```
+
 
