@@ -116,3 +116,29 @@ perms sudo chown -R webgen:webgen /var/www/HTML
 ```
 
 
+## Task 4
+
+Firstly, enable the previosuly installed ufw service:
+
+Do this: 
+
+```
+sudo systemctl enable --now ufw.service
+```
+
+Then use these commands to configure ufw:
+
+Execute these in the order shown: 
+
+```
+sudo ufw allow ssh
+
+sudo ufw limit ssh
+
+sudo ufw allow http
+
+sudo ufw enable
+```
+
+
+
