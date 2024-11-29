@@ -4,3 +4,12 @@ After=network-online.target
 [Timer]
 OnCalendar=*_*_* 5:00:00
 Persistent=true
+
+[Service]
+Type=simple
+ExecStart=/var/lib/webgen/bin/generate_index
+User=webgen
+WorkingDirectory=/var/lib/webgen
+
+[Install]
+WantedBy=timers.target
